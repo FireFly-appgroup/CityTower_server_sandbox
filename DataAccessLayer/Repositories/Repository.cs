@@ -52,5 +52,15 @@ namespace DataAccessLayer.Repositories
         {
             Context.Set<TEntity>().RemoveRange(entities);
         }
+
+        public void Save()
+        {
+            Context.SaveChanges();
+        }
+
+        public void Update(TEntity item)
+        {
+            Context.Entry(item).State = EntityState.Modified;
+        }
     }
 }

@@ -16,7 +16,6 @@ namespace CityTowerServer
             using (var unitOfWork = new UnitOfWork(new CityTowerDataBase()))
             {
                 var productByName = unitOfWork.GoodsList.GetProductByName("Phone");
-
             }
         }
     }
