@@ -9,6 +9,7 @@ namespace DataAccessLayer.Interfaces
     public interface IUnitOfWork : IDisposable
     {
         IGoodsListRepostirory GoodsList { get; }
+        ISexListRepository SexList { get; }
         int Complete();
     }
 }

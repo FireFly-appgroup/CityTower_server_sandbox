@@ -16,6 +16,11 @@ namespace CityTowerServer
             using (var unitOfWork = new UnitOfWork(new CityTowerDataBase()))
             {
                 var productByName = unitOfWork.GoodsList.GetProductByName("Phone");
+                sex_list sex = new sex_list();
+                sex.sex_id = 2;
+                sex.sex = "123";
+                unitOfWork.SexList.SetSexList(sex);
+                unitOfWork.SexList.Save();
             }
         }
     }

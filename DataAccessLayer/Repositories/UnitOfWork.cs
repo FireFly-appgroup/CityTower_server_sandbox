@@ -16,9 +16,11 @@ namespace DataAccessLayer.Repositories
         {
             _context = context;
             GoodsList = new GoodsListRepository(_context);
+            SexList = new SexListRepository(_context);
         }
 
         public IGoodsListRepostirory GoodsList { get; private set; }
+        public ISexListRepository SexList { get; private set; }
 
         public int Complete()
         {
